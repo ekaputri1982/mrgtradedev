@@ -1,0 +1,7 @@
+Table "ticket_conv" {
+  "id" INT(11) [pk, not null, increment]
+  "ticket_id" INT(11) [not null, default: "0"]
+  "user_id" INT(11) [not null, default: "0"]
+  "message" TEXT [not null]
+  "CREATED_AT" BIGINT(20) [not null]
+}

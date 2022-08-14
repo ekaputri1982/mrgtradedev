@@ -1,0 +1,3 @@
+Table "lock_process" {
+  "event" VARCHAR(50) [pk, not null]
+}

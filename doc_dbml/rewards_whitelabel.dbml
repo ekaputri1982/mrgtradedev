@@ -1,0 +1,11 @@
+Table "rewards_whitelabel" {
+  "id" INT(11) [pk, not null, increment]
+  "reward_id" INT(11) [not null]
+  "company" INT(11) [not null]
+
+Indexes {
+  (reward_id, company) [unique, name: "reward_company"]
+  company [name: "company"]
+  reward_id [name: "reward_id"]
+}
+}

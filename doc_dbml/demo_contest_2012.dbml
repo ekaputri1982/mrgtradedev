@@ -1,0 +1,11 @@
+Table "demo_contest_2012" {
+  "user_id" INT(5) [not null]
+  "user_mt4id" INT(15) [not null]
+  "password" VARCHAR(8) [not null]
+  "mail_sent" INT(1) [not null, default: "0"]
+  "time" INT(10) [not null]
+
+Indexes {
+  user_id [name: "user_id"]
+}
+}

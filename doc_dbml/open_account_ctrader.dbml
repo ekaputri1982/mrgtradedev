@@ -1,0 +1,16 @@
+Table "open_account_ctrader" {
+  "id" BIGINT(20) [pk, not null, increment]
+  "user_id" INT(5) [not null]
+  "platform_id" VARCHAR(20) [not null]
+  "tipe" INT(1) [not null, default: "0"]
+  "req_time" INT(10) [not null]
+  "create_time" INT(10) [not null, default: "0"]
+  "contest" INT(1) [not null, default: "0"]
+  "acc_type" INT(1) [not null, default: "0"]
+  "origin" TINYINT(1) [not null, default: "0"]
+
+Indexes {
+  user_id [name: "user_id"]
+  platform_id [name: "platform_id"]
+}
+}

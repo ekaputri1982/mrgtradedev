@@ -1,0 +1,18 @@
+Table "fxd_wd_requests" {
+  "id" INT(11) [pk, not null, increment]
+  "account" INT(11) [not null]
+  "event" INT(11) [not null]
+  "transid" INT(11) [default: NULL, note: 'if status not 0, wd sudah disubmit & inputkan transID']
+  "stat_traders" TINYINT(1) [not null, default: "0", note: '0 pending, 1 approved, 2 rejected']
+  "reconnect" TINYINT(1) [not null, default: "0", note: '0 suspend, 1 active, 2 inactive']
+  "margin" DOUBLE [default: NULL]
+  "totalDepo" DOUBLE [default: NULL]
+  "balance" DOUBLE [default: NULL]
+  "minDepo" DOUBLE [default: NULL]
+  "unpaidMngFee" DOUBLE [default: NULL]
+  "penalty" DOUBLE [default: NULL]
+
+Indexes {
+  account [name: "account"]
+}
+}

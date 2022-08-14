@@ -1,0 +1,9 @@
+Table "cash_config" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(64) [default: NULL]
+  "value" TEXT [default: NULL]
+
+Indexes {
+  name [unique, name: "name"]
+}
+}

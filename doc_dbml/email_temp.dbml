@@ -1,0 +1,3 @@
+Table "email_temp" {
+  "email" VARCHAR(255) [not null]
+}

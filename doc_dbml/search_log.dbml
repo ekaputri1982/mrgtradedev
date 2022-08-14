@@ -1,0 +1,4 @@
+Table "search_log" {
+  "id" INT(10) [pk, not null, increment]
+  "query" LONGTEXT [not null]
+}

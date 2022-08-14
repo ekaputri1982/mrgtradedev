@@ -1,0 +1,8 @@
+Table "tmp" {
+  "account" VARCHAR(50) [not null]
+
+Indexes {
+  account [unique, name: "email"]
+}
+  Note: 'buat cocokin data - Vicky'
+}

@@ -1,0 +1,15 @@
+Table "countries" {
+  "country_id" INT(11) [pk, not null, increment]
+  "code" CHAR(2) [not null, note: 'Two-letter country code (ISO 3166-1 alpha-2)']
+  "name" VARCHAR(64) [not null, note: 'English country name']
+  "full_name" VARCHAR(128) [not null, note: 'Full English country name']
+  "iso3" CHAR(3) [not null, note: 'Three-letter country code (ISO 3166-1 alpha-3)']
+  "number" SMALLINT(3) [not null, note: 'Three-digit country number (ISO 3166-1 numeric)']
+  "continent_code" CHAR(2) [not null]
+  "display_order" INT(3) [not null, default: "900"]
+
+Indexes {
+  code [unique, name: "idx_code"]
+  continent_code [name: "idx_continent_code"]
+}
+}

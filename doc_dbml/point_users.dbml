@@ -1,0 +1,18 @@
+Table "point_users" {
+  "id" INT(10) [pk, not null, increment]
+  "userid" INT(10) [not null]
+  "membership" TINYINT(3) [not null, default: "0"]
+  "nominal" INT(10) [not null]
+  "expired" INT(10) [not null]
+  "posted" INT(10) [not null]
+  "admin" INT(10) [not null, note: 'user who posted']
+  "reason" TEXT [default: NULL]
+  "sisa" INT(11) [not null]
+  "rate" INT(11) [default: NULL]
+  "params" TEXT [default: NULL]
+
+Indexes {
+  admin [name: "admin"]
+  userid [name: "Index 3"]
+}
+}

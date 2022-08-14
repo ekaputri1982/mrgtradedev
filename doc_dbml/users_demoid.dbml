@@ -1,0 +1,15 @@
+Table "users_demoid" {
+  "idx" INT(11) [pk, not null, increment]
+  "metaserver_id" INT(11) [not null, default: "1"]
+  "user_id" INT(5) [not null]
+  "user_demoid" VARCHAR(21) [default: NULL]
+  "password" VARCHAR(20) [not null]
+  "reqtime" INT(10) [not null]
+  "createtime" INT(10) [not null]
+  "platform" TINYINT(1) [not null, default: "0"]
+
+Indexes {
+  user_id [name: "user_id"]
+  metaserver_id [name: "metaserver_id"]
+}
+}

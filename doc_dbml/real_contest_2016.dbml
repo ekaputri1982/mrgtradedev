@@ -1,0 +1,13 @@
+Table "real_contest_2016" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(5) [not null]
+  "user_mt4id" INT(15) [not null]
+  "password" VARCHAR(8) [not null]
+  "time" INT(10) [not null]
+  "active" TINYINT(4) [not null, default: "1"]
+
+Indexes {
+  time [name: "time"]
+  user_id [name: "user_id"]
+}
+}

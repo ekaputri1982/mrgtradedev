@@ -1,0 +1,6 @@
+Table "email_content" {
+  "id" INT(11) [pk, not null, increment]
+  "email_id" INT(11) [default: NULL]
+  "action" INT(11) [default: NULL, note: '0: Admin, 1: User']
+  "content" LONGTEXT [not null]
+}

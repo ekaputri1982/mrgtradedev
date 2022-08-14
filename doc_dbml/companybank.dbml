@@ -1,0 +1,7 @@
+Table "companybank" {
+  "bank_id" INT(5) [pk, not null, increment]
+  "curr_id" INT(5) [not null]
+  "bank_name" VARCHAR(100) [not null]
+  "bank_acc_no" VARCHAR(20) [not null]
+  "bank_acc_name" VARCHAR(100) [not null]
+}

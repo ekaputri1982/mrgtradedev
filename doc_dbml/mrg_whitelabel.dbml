@@ -1,0 +1,14 @@
+Table "mrg_whitelabel" {
+  "id" INT(11) [pk, not null, increment]
+  "company" VARCHAR(96) [not null]
+  "endpoint_url" TEXT [default: NULL]
+  "additional_header" TEXT [default: NULL]
+  "main_url" VARCHAR(128) [default: NULL]
+  "ims_url" VARCHAR(128) [default: NULL]
+  "symbol" VARCHAR(10) [not null, default: ""]
+
+Indexes {
+  company [unique, name: "mrg_whitelabel_company"]
+  symbol [unique, name: "mrg_whitelabel_symbol"]
+}
+}

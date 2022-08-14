@@ -1,0 +1,8 @@
+Table "req_protrader_depo_ref" {
+  "deposit_id" INT(11) [pk, not null]
+  "deporef_id" INT(11) [not null]
+
+Indexes {
+  deporef_id [unique, name: "deporef_id"]
+}
+}

@@ -1,0 +1,21 @@
+Table "point" {
+  "id" INT(10) [pk, not null, increment]
+  "metaserver_id" INT(11) [not null, default: "1"]
+  "platform_id" VARCHAR(50) [not null]
+  "group" VARCHAR(100) [not null]
+  "lot" FLOAT [not null]
+  "membership" TINYINT(3) [not null]
+  "nominal" INT(10) [not null]
+  "expired" INT(10) [not null]
+  "posted" INT(10) [not null]
+  "admin" INT(10) [not null, note: 'user who posted']
+  "reason" TEXT [default: NULL]
+  "sisa" INT(11) [not null]
+  "rate" INT(11) [default: NULL]
+
+Indexes {
+  platform_id [name: "account"]
+  admin [name: "admin"]
+  metaserver_id [name: "metaserver_id"]
+}
+}

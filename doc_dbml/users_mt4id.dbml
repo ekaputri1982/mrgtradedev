@@ -1,0 +1,10 @@
+Table "users_mt4id" {
+  "user_id" INT(5) [not null]
+  "user_mt4id" VARCHAR(20) [pk, not null, default: ""]
+  "rate" INT(1) [not null]
+  "id_created" INT(10) [not null]
+
+Indexes {
+  user_id [name: "user_id"]
+}
+}

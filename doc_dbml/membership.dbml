@@ -1,0 +1,6 @@
+Table "membership" {
+  "id" TINYINT(4) [pk, not null]
+  "name" VARCHAR(50) [default: NULL]
+  "equity" DOUBLE [default: NULL]
+  "multiplier" DOUBLE [default: NULL]
+}

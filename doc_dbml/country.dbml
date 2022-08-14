@@ -1,0 +1,5 @@
+Table "country" {
+  "id" VARCHAR(2) [pk, not null]
+  "name" VARCHAR(64) [not null]
+  "telephone_code" VARCHAR(10) [default: NULL]
+}

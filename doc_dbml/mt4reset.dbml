@@ -1,0 +1,18 @@
+Table "mt4reset" {
+  "id" INT(11) [pk, not null, increment]
+  "metaserver_id" INT(11) [not null, default: "1"]
+  "userid" INT(11) [not null]
+  "platform_id" VARCHAR(50) [not null]
+  "platform" TINYINT(4) [not null, default: "0"]
+  "origin" TINYINT(4) [not null, default: "0"]
+  "posted" INT(11) [not null]
+  "modified" INT(11) [default: NULL]
+  "modifier" INT(11) [default: NULL]
+  "status" TINYINT(4) [not null, default: "0", note: '0: requested 1:done']
+
+Indexes {
+  platform_id [name: "plat_id"]
+  userid [name: "userid"]
+  metaserver_id [name: "metaserver_id"]
+}
+}

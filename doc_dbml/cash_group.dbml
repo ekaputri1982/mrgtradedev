@@ -1,0 +1,17 @@
+Table "cash_group" {
+  "id" INT(11) [pk, not null, increment]
+  "company" INT(11) [not null, default: "0"]
+  "group" VARCHAR(16) [not null]
+  "rateid" TINYINT(4) [not null, default: "0"]
+  "rate" VARCHAR(16) [not null]
+  "complete_depo" TINYINT(4) [not null, default: "0"]
+  "approve_wd" TINYINT(4) [not null, default: "0"]
+  "cashback" TINYINT(4) [not null, default: "0"]
+
+Indexes {
+  (company, group) [unique, name: "cash_group_company_group"]
+  company [name: "cash_group_company"]
+  group [name: "cash_group_group"]
+  cashback [name: "cash_group_cashback"]
+}
+}

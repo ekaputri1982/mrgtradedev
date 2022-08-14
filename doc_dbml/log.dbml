@@ -1,0 +1,15 @@
+Table "log" {
+  "id" INT(10) [pk, not null, increment]
+  "user_id" INT(5) [not null]
+  "action" VARCHAR(255) [not null]
+  "ip" VARCHAR(15) [not null]
+  "browser" VARCHAR(255) [not null]
+  "time" INT(10) [not null]
+
+Indexes {
+  user_id [name: "user_id"]
+  action [name: "action"]
+  ip [name: "ip"]
+  browser [name: "browser"]
+}
+}

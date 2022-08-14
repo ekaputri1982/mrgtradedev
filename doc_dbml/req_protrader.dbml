@@ -1,0 +1,17 @@
+Table "req_protrader" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(11) [not null]
+  "phone" VARCHAR(100) [not null]
+  "address" TEXT [not null]
+  "broker_name" TEXT [not null]
+  "mt4_id" TEXT [not null]
+  "inv_pass" TEXT [not null]
+  "deposit" TINYINT(4) [not null]
+  "status" TINYINT(4) [not null, default: "0", note: '0: onprogress; 1: success; 2: rejected; 3: upload ID failed ']
+  "req_date" BIGINT(20) [not null]
+  "open_acc_id" INT(11) [default: NULL]
+  "active_date" BIGINT(20) [default: NULL]
+  "expired_date" BIGINT(20) [default: NULL]
+  "MODIFY_TIME" BIGINT(20) [not null]
+  Note: 'Untuk menampung request Open Account Pro Trader'
+}

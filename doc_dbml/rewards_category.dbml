@@ -1,0 +1,8 @@
+Table "rewards_category" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(50) [not null]
+
+Indexes {
+  name [unique, name: "name"]
+}
+}

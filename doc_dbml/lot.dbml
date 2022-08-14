@@ -1,0 +1,25 @@
+Table "lot" {
+  "user_id" INT(5) [not null]
+  "mt4id" VARCHAR(10) [not null]
+  "year" INT(4) [not null]
+  "jan" DECIMAL(10,2) [not null]
+  "feb" DECIMAL(10,2) [not null]
+  "mar" DECIMAL(10,2) [not null]
+  "apr" DECIMAL(10,2) [not null]
+  "may" DECIMAL(10,2) [not null]
+  "jun" DECIMAL(10,2) [not null]
+  "jul" DECIMAL(10,2) [not null]
+  "aug" DECIMAL(10,2) [not null]
+  "sep" DECIMAL(10,2) [not null]
+  "oct" DECIMAL(10,2) [not null]
+  "nov" DECIMAL(10,2) [not null]
+  "des" DECIMAL(10,2) [not null]
+  "time" INT(10) [not null]
+
+Indexes {
+  user_id [name: "user_id"]
+  mt4id [name: "mt4id"]
+  year [name: "year"]
+  (year, user_id, mt4id) [pk]
+}
+}

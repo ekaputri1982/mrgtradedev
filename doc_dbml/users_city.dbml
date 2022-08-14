@@ -1,0 +1,5 @@
+Table "users_city" {
+  "userid" INT(5) [pk, not null]
+  "ket" VARCHAR(50) [default: NULL]
+  Note: 'userid yang city nya tidak ditemukan gmaps'
+}

@@ -1,0 +1,13 @@
+Table "mt4login" {
+  "id" INT(11) [pk, not null, increment]
+  "mt4id" INT(11) [not null]
+  "group" VARCHAR(16) [not null]
+  "balance" DOUBLE [not null]
+  "equity" DOUBLE [not null]
+  "margin" DOUBLE [not null]
+  "freemargin" DOUBLE [not null]
+  "type" VARCHAR(50) [not null]
+  "dt" DATETIME [not null]
+  "ipclient" VARCHAR(50) [not null]
+  "ip" VARCHAR(50) [not null]
+}

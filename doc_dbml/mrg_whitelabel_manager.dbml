@@ -1,0 +1,12 @@
+Table "mrg_whitelabel_manager" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(50) [not null]
+  "description" VARCHAR(50) [default: NULL]
+  "secret_key" VARCHAR(96) [not null, default: "0"]
+  "private_jwt_key" MEDIUMTEXT [default: NULL]
+  "public_jwt_key" MEDIUMTEXT [default: NULL]
+
+Indexes {
+  secret_key [unique, name: "secret_key"]
+}
+}

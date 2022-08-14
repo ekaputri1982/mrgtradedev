@@ -1,0 +1,10 @@
+Table "contest_schedule" {
+  "id" INT(11) [pk, not null, increment]
+  "period" VARCHAR(50) [not null, default: ""]
+  "eventstart" DATE [not null]
+  "eventend" DATE [not null]
+  "regstart" DATE [not null]
+  "regend" DATE [not null]
+  "infowinner" DATE [not null]
+  "active" TINYINT(4) [default: "1"]
+}

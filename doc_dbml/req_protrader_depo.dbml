@@ -1,0 +1,5 @@
+Table "req_protrader_depo" {
+  "id" INT(11) [pk, not null, increment]
+  "nominal" DECIMAL(15,2) [not null, default: "0.00"]
+  "status" TINYINT(4) [not null, default: "1", note: '0: disabled; 1: active']
+}

@@ -1,0 +1,33 @@
+Table "cash_internal_transfer" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(11) [default: NULL]
+  "creator" INT(11) [default: NULL]
+  "settler" INT(11) [default: NULL]
+  "settle_note" TEXT [default: NULL]
+  "status" TINYINT(4) [not null, default: "0", note: '0: pending, 1: success, 2: refuse']
+  "source_account" INT(11) [default: NULL]
+  "source_metaserver" INT(11) [not null, default: "1"]
+  "source_group" VARCHAR(16) [default: NULL]
+  "source_rate" TINYINT(4) [default: NULL]
+  "source_rateval" INT(11) [default: NULL]
+  "source_order" INT(11) [default: NULL]
+  "source_amount" DOUBLE [default: NULL]
+  "source_comment" VARCHAR(32) [default: NULL]
+  "target_account" INT(11) [default: NULL]
+  "target_metaserver" INT(11) [not null, default: "1"]
+  "target_group" VARCHAR(16) [default: NULL]
+  "target_rate" TINYINT(4) [default: NULL]
+  "target_rateval" INT(11) [default: NULL]
+  "target_order" INT(11) [default: NULL]
+  "target_amount" DOUBLE [default: NULL]
+  "target_comment" VARCHAR(32) [default: NULL]
+  "created_at" DATETIME [default: NULL]
+  "done_at" DATETIME [default: NULL]
+
+Indexes {
+  source_order [unique, name: "source_order"]
+  target_order [unique, name: "target_order"]
+  source_metaserver [name: "source_metaserver"]
+  target_metaserver [name: "target_metaserver"]
+}
+}

@@ -1,0 +1,14 @@
+Table "rewards" {
+  "id" INT(11) [pk, not null, increment]
+  "category" INT(11) [not null]
+  "name" VARCHAR(50) [not null]
+  "description" TEXT [default: NULL]
+  "stock" INT(11) [not null, default: `-1`, note: '-1: unlimited']
+  "expired" INT(11) [default: NULL]
+  "nominal" INT(11) [not null]
+  "product" VARCHAR(50) [default: NULL]
+  "sticky" TINYINT(4) [default: NULL]
+  "featured" TINYINT(4) [default: NULL]
+  "status" TINYINT(4) [not null, default: "0"]
+  "params" TEXT [default: NULL]
+}

@@ -1,0 +1,8 @@
+Table "email_content_var" {
+  "content_id" INT(11) [not null]
+  "var_id" INT(11) [not null]
+
+Indexes {
+  (content_id, var_id) [pk]
+}
+}

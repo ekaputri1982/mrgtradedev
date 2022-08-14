@@ -1,0 +1,20 @@
+Table "redeem" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(11) [not null]
+  "reward_id" INT(11) [not null]
+  "nominal" INT(11) [not null, note: 'total redeemed point']
+  "additional" INT(11) [default: NULL, note: 'in Rp']
+  "submitted" INT(11) [not null]
+  "to_name" VARCHAR(50) [not null]
+  "to_phone" VARCHAR(50) [not null]
+  "to_address" TEXT [not null]
+  "ship_code" VARCHAR(50) [default: NULL, note: 'no resi']
+  "reason" TEXT [default: NULL]
+  "status" TINYINT(4) [not null, default: "0", note: '0:redeemed, 1:processed, 2:on-delivery, 3:success, 4:cancel']
+  "last_modify" INT(11) [not null]
+
+Indexes {
+  user_id [name: "user_id"]
+  reward_id [name: "reward"]
+}
+}

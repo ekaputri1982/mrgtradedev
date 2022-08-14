@@ -1,0 +1,24 @@
+Table "mrg_queue" {
+  "id" INT(11) [pk, not null, increment]
+  "category" VARCHAR(18) [not null]
+  "task" VARCHAR(64) [not null]
+  "params" TEXT [default: NULL]
+  "locked_id" VARCHAR(64) [default: NULL]
+  "priority" INT(11) [not null, default: "10"]
+  "retry" INT(11) [not null, default: "0"]
+  "max_retry" INT(11) [not null, default: "0"]
+  "last_retry" DATETIME [default: NULL]
+  "created_at" DATETIME [default: `utc_timestamp()`]
+  "available_at" DATETIME [default: NULL]
+  "expired_at" DATETIME [default: NULL]
+  "last_message" TEXT [default: NULL]
+
+Indexes {
+  category [name: "category"]
+  task [name: "task"]
+  priority [name: "priority"]
+  available_at [name: "available_at"]
+  expired_at [name: "expired_at"]
+  locked_id [name: "locked_id"]
+}
+}

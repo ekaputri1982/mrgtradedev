@@ -1,0 +1,14 @@
+Table "account_marketing_copy" {
+  "mt4acc" VARCHAR(20) [not null]
+  "marketing" INT(11) [not null, default: "0", note: 'follow-up']
+  "maintenance" INT(11) [not null, default: "0"]
+  "active" TINYINT(4) [not null]
+  "lastmodified" INT(11) [not null]
+  "modifiedby" INT(11) [not null, default: "0"]
+
+Indexes {
+  mt4acc [name: "mt4acc"]
+  marketing [name: "marketing"]
+  maintenance [name: "maintenance"]
+}
+}

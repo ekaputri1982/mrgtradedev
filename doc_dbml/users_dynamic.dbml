@@ -1,0 +1,5 @@
+Table "users_dynamic" {
+  "userid" INT(11) [not null]
+  "event" INT(11) [not null]
+  "creator" INT(11) [not null]
+}

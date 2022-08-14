@@ -1,0 +1,11 @@
+Table "mrg_whitelabel_manager_access" {
+  "id" INT(11) [pk, not null, increment]
+  "manager_id" INT(11) [not null]
+  "company_id" INT(11) [not null]
+
+Indexes {
+  (manager_id, company_id) [unique, name: "manager_id_company_id"]
+  manager_id [name: "manager_id"]
+  company_id [name: "company_id"]
+}
+}

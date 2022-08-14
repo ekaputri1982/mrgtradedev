@@ -1,0 +1,11 @@
+Table "redeem_costs" {
+  "id" INT(11) [pk, not null, increment]
+  "reid" INT(11) [not null]
+  "label" TINYTEXT [not null]
+  "costs" DOUBLE [not null]
+  "desc" TEXT [default: NULL]
+
+Indexes {
+  reid [name: "Index 2"]
+}
+}

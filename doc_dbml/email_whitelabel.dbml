@@ -1,0 +1,11 @@
+Table "email_whitelabel" {
+  "id" INT(11) [pk, not null, increment]
+  "email_id" INT(11) [not null]
+  "company" INT(11) [not null]
+
+Indexes {
+  (email_id, company) [unique, name: "email_company"]
+  company [name: "company"]
+  email_id [name: "email_id"]
+}
+}

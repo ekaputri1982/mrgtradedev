@@ -1,0 +1,4 @@
+Table "email_var" {
+  "id" INT(11) [pk, not null, increment]
+  "name" VARCHAR(50) [default: NULL]
+}

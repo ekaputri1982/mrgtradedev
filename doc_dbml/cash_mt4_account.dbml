@@ -1,0 +1,21 @@
+Table "cash_mt4_account" {
+  "id" INT(11) [pk, not null, increment]
+  "mt4id" INT(11) [not null]
+  "metaserver_id" INT(11) [not null, default: "0"]
+  "platform_type" INT(11) [not null, default: "0"]
+  "user_id" INT(11) [not null]
+  "taken" TINYINT(4) [not null, default: "0"]
+  "acc_type" TINYINT(4) [not null, default: `-1`]
+  "custom" TINYINT(4) [not null, default: "0"]
+  "error_reason" TEXT [default: NULL]
+
+Indexes {
+  (metaserver_id, mt4id) [unique, name: "mt4id_unique"]
+  user_id [name: "user_id"]
+  (acc_type, taken) [name: "acc_type"]
+  custom [name: "custom"]
+  metaserver_id [name: "metaserver_id"]
+  platform_type [name: "platform_type"]
+  mt4id [name: "mt4id"]
+}
+}

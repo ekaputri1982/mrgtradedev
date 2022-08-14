@@ -1,0 +1,8 @@
+Table "rewards_tour" {
+  "id" INT(11) [pk, not null, increment]
+  "point" INT(11) [not null]
+  "silver" INT(11) [not null]
+  "gold" INT(11) [not null]
+  "platinum" INT(11) [not null]
+  "diamond" INT(11) [not null]
+}

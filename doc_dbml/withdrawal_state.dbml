@@ -1,0 +1,11 @@
+Table "withdrawal_state" {
+  "withdraw_id" INT(11) [pk, not null]
+  "cashier" INT(11) [default: NULL]
+  "cashier_transfer_tm" DATETIME [default: NULL]
+  "cashier_note" TEXT [default: NULL]
+  "settler" INT(11) [default: NULL]
+  "settle_order_num" INT(11) [default: NULL]
+  "settle_order_tm" DATETIME [default: NULL]
+  "settle_note" TEXT [default: NULL]
+  "last_modify" DATETIME [default: NULL]
+}

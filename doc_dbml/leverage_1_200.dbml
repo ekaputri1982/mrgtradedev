@@ -1,0 +1,7 @@
+Table "leverage_1_200" {
+  "mt4id" INT(11) [pk, not null]
+  "email" VARCHAR(50) [not null]
+  "fullname" VARCHAR(50) [not null]
+  "request_time" INT(10) [not null]
+  "created_time" INT(10) [not null]
+}

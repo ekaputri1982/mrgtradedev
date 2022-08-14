@@ -1,0 +1,8 @@
+Table "users_error" {
+  "source" INT(11) [not null]
+  "LOGIN" INT(11) [default: NULL]
+  "NAME" CHAR(128) [default: NULL]
+  "PHONE" CHAR(32) [default: NULL]
+  "EMAIL" CHAR(48) [default: NULL]
+  Note: 'request Adi - 23/12/2016'
+}

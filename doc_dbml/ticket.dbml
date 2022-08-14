@@ -1,0 +1,11 @@
+Table "ticket" {
+  "id" INT(11) [pk, not null, increment]
+  "user_id" INT(11) [not null]
+  "subject" TEXT [not null]
+  "type" INT(11) [not null]
+  "related_account" INT(11) [default: NULL]
+  "priority" INT(11) [not null]
+  "status" INT(11) [not null, default: "1", note: '0: closed, 1: open']
+  "CREATED_AT" BIGINT(20) [not null]
+  "MODIFIY_TIME" BIGINT(20) [not null]
+}

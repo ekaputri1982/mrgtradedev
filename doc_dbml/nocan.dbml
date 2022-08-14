@@ -1,0 +1,11 @@
+Table "nocan" {
+  "idx_nocan" INT(11) [pk, not null, increment]
+  "nocan" INT(11) [not null]
+  "user_id" VARCHAR(11) [not null]
+  "sold" VARCHAR(1) [not null]
+  "sold_date" INT(11) [not null]
+
+Indexes {
+  nocan [unique, name: "nocan"]
+}
+}

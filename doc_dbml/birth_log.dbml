@@ -1,0 +1,11 @@
+Table "birth_log" {
+  "user_id" INT(5) [not null]
+  "years" INT(4) [not null]
+  "sender_id" INT(5) [not null]
+  "time" INT(10) [not null]
+  "claim" INT(1) [not null, default: "0"]
+
+Indexes {
+  user_id [name: "user_id"]
+}
+}

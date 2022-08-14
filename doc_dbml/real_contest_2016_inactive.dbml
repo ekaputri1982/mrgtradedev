@@ -1,0 +1,8 @@
+Table "real_contest_2016_inactive" {
+  "id" INT(11) [pk, not null, default: "0"]
+  "user_id" INT(5) [not null]
+  "user_mt4id" INT(15) [not null]
+  "password" VARCHAR(8) [not null]
+  "time" INT(10) [not null]
+  "active" TINYINT(4) [not null, default: "1"]
+}

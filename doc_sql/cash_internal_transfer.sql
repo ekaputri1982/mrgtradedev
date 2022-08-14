@@ -1,0 +1,33 @@
+CREATE TABLE `cash_internal_transfer` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`user_id` INT(11) NULL DEFAULT NULL,
+	`creator` INT(11) NULL DEFAULT NULL,
+	`settler` INT(11) NULL DEFAULT NULL,
+	`settle_note` TEXT NULL DEFAULT NULL,
+	`status` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '0: pending, 1: success, 2: refuse',
+	`source_account` INT(11) NULL DEFAULT NULL,
+	`source_metaserver` INT(11) NOT NULL DEFAULT '1',
+	`source_group` VARCHAR(16) NULL DEFAULT NULL,
+	`source_rate` TINYINT(4) NULL DEFAULT NULL,
+	`source_rateval` INT(11) NULL DEFAULT NULL,
+	`source_order` INT(11) NULL DEFAULT NULL,
+	`source_amount` DOUBLE NULL DEFAULT NULL,
+	`source_comment` VARCHAR(32) NULL DEFAULT NULL,
+	`target_account` INT(11) NULL DEFAULT NULL,
+	`target_metaserver` INT(11) NOT NULL DEFAULT '1',
+	`target_group` VARCHAR(16) NULL DEFAULT NULL,
+	`target_rate` TINYINT(4) NULL DEFAULT NULL,
+	`target_rateval` INT(11) NULL DEFAULT NULL,
+	`target_order` INT(11) NULL DEFAULT NULL,
+	`target_amount` DOUBLE NULL DEFAULT NULL,
+	`target_comment` VARCHAR(32) NULL DEFAULT NULL,
+	`created_at` DATETIME NULL DEFAULT NULL,
+	`done_at` DATETIME NULL DEFAULT NULL,
+	PRIMARY KEY (`id`),
+	UNIQUE INDEX `source_order` (`source_order`),
+	UNIQUE INDEX `target_order` (`target_order`),
+	INDEX `source_metaserver` (`source_metaserver`),
+	INDEX `target_metaserver` (`target_metaserver`)
+)
+AUTO_INCREMENT=1272
+;

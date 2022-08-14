@@ -1,0 +1,23 @@
+Table "mt4trades" {
+  "order" INT(11) [pk, not null]
+  "login" INT(11) [not null]
+  "group" VARCHAR(16) [not null]
+  "symbol" VARCHAR(16) [not null]
+  "digits" INT(11) [not null]
+  "cmd" VARCHAR(16) [not null]
+  "volume" DOUBLE [not null]
+  "open_time" TIMESTAMP [not null, default: `current_timestamp()`]
+  "open_price" DOUBLE [not null]
+  "sl" DOUBLE [not null]
+  "tp" DOUBLE [not null]
+  "close_time" TIMESTAMP [not null, default: "0000-00-00 00:00:00"]
+  "reason" VARCHAR(16) [not null]
+  "commission" DOUBLE [not null]
+  "commission_agent" DOUBLE [not null]
+  "swap" DOUBLE [not null]
+  "close_price" DOUBLE [not null]
+  "profit" DOUBLE [not null]
+  "taxes" DOUBLE [not null]
+  "comment" VARCHAR(32) [not null]
+}
+

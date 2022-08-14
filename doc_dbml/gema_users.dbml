@@ -1,0 +1,33 @@
+Table "gema_users" {
+  "user_id" INT(5) [pk, not null, increment]
+  "user_level" INT(1) [not null, default: "1"]
+  "user_name" VARCHAR(100) [default: NULL]
+  "user_pass" VARCHAR(25) [default: NULL]
+  "user_email" VARCHAR(50) [default: NULL]
+  "user_realname" VARCHAR(100) [not null, default: ""]
+  "user_birth" DATE [not null, default: "0000-00-00"]
+  "user_blntgl" VARCHAR(4) [not null, default: "0000"]
+  "user_addr" VARCHAR(255) [not null, default: ""]
+  "user_phone" VARCHAR(15) [not null, default: ""]
+  "user_mobile" VARCHAR(15) [not null]
+  "user_mt4id" VARCHAR(255) [not null]
+  "user_bbpin" VARCHAR(10) [not null]
+  "user_bankname" VARCHAR(20) [not null]
+  "user_bankaccno" VARCHAR(20) [not null]
+  "user_bankreg" VARCHAR(100) [not null]
+  "user_registered" INT(10) [not null]
+  "user_referrer_id" INT(5) [not null, default: "0"]
+  "user_ref_url" VARCHAR(255) [not null]
+  "real_acc" INT(1) [not null, default: "0"]
+  "euro2012" INT(1) [not null, default: "0"]
+  "country" VARCHAR(2) [not null, default: "id"]
+  "city" VARCHAR(50) [not null]
+  "paypal" VARCHAR(50) [not null]
+  "origin" TINYINT(1) [not null, default: "0"]
+
+Indexes {
+  user_name [unique, name: "user_name"]
+  user_email [unique, name: "user_email"]
+  user_referrer_id [name: "user_referrer_id"]
+}
+}

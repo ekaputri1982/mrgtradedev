@@ -1,0 +1,22 @@
+Table "tools_transaction" {
+  "id" INT(5) [pk, not null, increment]
+  "user_id" INT(5) [not null]
+  "mt4id" VARCHAR(20) [not null]
+  "metaserver_id" INT(11) [not null, default: "1"]
+  "manager" VARCHAR(20) [not null]
+  "ref_number" VARCHAR(50) [not null]
+  "link" INT(11) [default: NULL]
+  "nominal" DECIMAL(15,6) [not null]
+  "rate" DECIMAL(10,2) [default: NULL]
+  "time" INT(10) [not null]
+  "tipe" INT(11) [not null, note: '0=deposit; 1=depositInternal; 1000=withdraw; 1001=withdrawInternal; 2000=newAccount; 3000=rebate; 3001=cashback;']
+  "comment" VARCHAR(200) [not null]
+  "MODIFY_TIME" BIGINT(20) [not null, default: "0"]
+
+Indexes {
+  ref_number [unique, name: "ref_number"]
+  mt4id [name: "mt4id"]
+  user_id [name: "user_id"]
+  metaserver_id [name: "metaserver_id"]
+}
+}

@@ -1,0 +1,7 @@
+Table "users_from_tf" {
+  "registered" INT(11) [not null]
+  "email" VARCHAR(50) [pk, not null]
+  "first_referrer" VARCHAR(200) [not null]
+  "goal_referrer" VARCHAR(200) [not null]
+  Note: 'data user dari IMS TF utk join ke MRG'
+}

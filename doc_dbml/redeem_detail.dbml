@@ -1,0 +1,12 @@
+Table "redeem_detail" {
+  "id" INT(11) [pk, not null, increment]
+  "reid" INT(11) [not null]
+  "nominal" INT(11) [not null]
+  "point_id" INT(11) [not null]
+  "source" VARCHAR(10) [not null]
+
+Indexes {
+  reid [name: "reid"]
+  point_id [name: "point_id"]
+}
+}
